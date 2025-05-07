@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         runtime:
-          - name: freedesktop+rust-24.08
+          - name: fd-24.08
             packages: org.freedesktop.Platform//24.08 org.freedesktop.Sdk//24.08 org.freedesktop.Sdk.Extension.rust-stable//24.08
             
     services:
@@ -70,4 +70,4 @@ jobs:
           file: ${{ matrix.runtime.name }}.Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ghcr.io/klassenserver7b/flatpak-github-actions-rust:${{ matrix.runtime.name }}
+          tags: ghcr.io/klassenserver7b/fp-gh-actions-rust:${{ matrix.runtime.name }}
