@@ -71,8 +71,3 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ghcr.io/klassenserver7b/flatpak-github-actions-rust:${{ matrix.runtime.name }}
-
-  test_actions:
-    needs:
-    - build-images
-    uses: ./.github/workflows/test.yml
